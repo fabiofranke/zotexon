@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - ReleaseDate
 
+### Maintenance
+- dependency updates
+- tests
+
 ## [0.5.0] - 2025-09-20
 
 ### Added
