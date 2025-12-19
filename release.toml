@@ -8,4 +8,12 @@ pre-release-replacements = [
     { file = "CHANGELOG.md", search = "<!-- next-header -->", replace = "<!-- next-header -->\n\n## [Unreleased] - ReleaseDate", exactly = 1 },
     { file = "CHANGELOG.md", search = "<!-- next-url -->", replace = "<!-- next-url -->\n[Unreleased]: https://github.com/zotexon/predicates-rs/compare/{{tag_name}}...HEAD", exactly = 1 },
 ]
-pre-release-hook = ["scripts/update-readme.sh"]
+pre-release-hook = [
+    "cargo",
+    "test",
+    "smoke",
+    "--",
+    "--ignored",
+    "&&",
+    "scripts/update-readme.sh",
+]
