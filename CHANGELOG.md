@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - ReleaseDate
 
+## [0.5.1] - 2025-12-19
+
 ### Maintenance
 - dependency updates
 - tests
@@ -75,7 +77,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - simple executable that fetches a zotero lib once in biblatex format
 
 <!-- next-url -->
-[Unreleased]: https://github.com/zotexon/predicates-rs/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/zotexon/predicates-rs/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/zotexon/predicates-rs/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/zotexon/predicates-rs/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/zotexon/predicates-rs/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/zotexon/predicates-rs/compare/v0.2.4...v0.3.0
