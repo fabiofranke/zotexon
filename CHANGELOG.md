@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - ReleaseDate
 
+### Changed
+- Renamed argument `--file` to `-o, --output` to follow GNU conventions
+
+### Maintenance
+- dependency updates
+
 ## [0.5.1] - 2025-12-19
 
 ### Maintenance

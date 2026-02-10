@@ -11,7 +11,7 @@ pub fn smoketest_export_snapshot() {
     let mut cmd = cargo_bin_cmd!("zotexon");
     cmd.arg("--api-key")
         .arg(api_key_from_env)
-        .arg("--file")
+        .arg("-o")
         .arg(export_path.to_str().unwrap())
         .assert()
         .success();
