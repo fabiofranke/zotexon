@@ -20,8 +20,8 @@ struct Args {
     api_key: String,
 
     /// File that the library will be exported to
-    #[arg(long)]
-    file: String,
+    #[arg(short, long)]
+    output: String,
 
     /// Format to be used for the export
     #[arg(long, default_value_t, value_enum)]
@@ -50,7 +50,7 @@ async fn main() -> anyhow::Result<()> {
     } else {
         ExportTrigger::none()
     };
-    let exporter = FileExporter::try_new(client, args.file.clone(), args.format.clone(), trigger)
+    let exporter = FileExporter::try_new(client, args.output.clone(), args.format.clone(), trigger)
         .await
         .with_context(|| "Error during file exporter initialization. Please ensure the file path is valid, the directory exists and is accessible.")?;
 
