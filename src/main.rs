@@ -76,10 +76,12 @@ async fn main() -> anyhow::Result<()> {
         .with_context(|| "Error during Zotero client initialization.")?;
     let cancellation_token = CancellationToken::new();
     let trigger = if args.sync {
+        log::info!("Starting sync mode");
         ExportTrigger::websocket(api_key, client.user_id(), cancellation_token.child_token())
             .await
             .with_context(|| "Error during WebSocket trigger initialization.")?
     } else {
+        log::info!("Starting single export mode");
         ExportTrigger::none()
     };
     let exporter = FileExporter::try_new(client, args.output.clone(), args.format.clone(), trigger)

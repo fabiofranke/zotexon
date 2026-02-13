@@ -57,8 +57,10 @@ impl<TClient: ZoteroClient> FileExporter<TClient> {
                     return Err(e);
                 }
             }
+            log::info!("Awaiting trigger for next export");
             keep_running = self.trigger.next().await.is_some();
         }
+        log::info!("Cancelled waiting for trigger");
         Ok(if has_changes {
             ExportSuccess::Changes
         } else {
