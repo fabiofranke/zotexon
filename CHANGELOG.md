@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - ReleaseDate
 
+### Added
+- new argument `log-level` to set the log output verbosity
+
+### Changed
+- default log level is now `info` (previously, no output at all, unless the environment variable `RUST_LOG` was used)
+
+### Removed
+- enviroment variable `RUST_LOG` is not used anymore
+
 ## [0.6.0] - 2026-02-10
 
 ### Changed
