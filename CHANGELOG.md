@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - ReleaseDate
 
+## [0.7.0] - 2026-02-13
+
 ### Added
 - new argument `log-level` to set the log output verbosity
 
@@ -94,7 +96,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - simple executable that fetches a zotero lib once in biblatex format
 
 <!-- next-url -->
-[Unreleased]: https://github.com/fabiofranke/zotexon/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/fabiofranke/zotexon/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/fabiofranke/zotexon/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/fabiofranke/zotexon/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/fabiofranke/zotexon/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/fabiofranke/zotexon/compare/v0.4.0...v0.5.0
