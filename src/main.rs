@@ -30,12 +30,44 @@ struct Args {
     /// Let the program listen for changes in the Zotero library and automatically export on every change. Program will run until interrupted (e.g. with Ctrl+C).
     #[arg(long)]
     sync: bool,
+
+    /// Set the verbosity of the log output.
+    #[arg(long, default_value_t, value_enum)]
+    log_level: LogLevel,
+}
+
+/// A wrapper for log levels, that allows using them as clap value_enum
+#[derive(Debug, Copy, Clone, Default, clap::ValueEnum)]
+enum LogLevel {
+    Off,
+    Error,
+    Warn,
+    #[default]
+    Info,
+    Debug,
+    Trace,
+}
+
+impl From<LogLevel> for log::LevelFilter {
+    fn from(value: LogLevel) -> Self {
+        match value {
+            LogLevel::Off => log::LevelFilter::Off,
+            LogLevel::Error => log::LevelFilter::Error,
+            LogLevel::Warn => log::LevelFilter::Warn,
+            LogLevel::Info => log::LevelFilter::Info,
+            LogLevel::Debug => log::LevelFilter::Debug,
+            LogLevel::Trace => log::LevelFilter::Trace,
+        }
+    }
 }
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    env_logger::init();
     let args = Args::parse();
+    env_logger::Builder::new()
+        .default_format()
+        .filter(None, args.log_level.into())
+        .init();
 
     let api_key = ApiKey(args.api_key);
     let client = ZoteroClientBuilder::new(api_key.clone())
