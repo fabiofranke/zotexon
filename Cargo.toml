@@ -8,9 +8,9 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1.0.101"
-clap = { version = "4.5.58", features = ["derive", "cargo"] }
+clap = { version = "4.5.60", features = ["derive", "cargo"] }
 env_logger = "0.11.9"
-futures = "0.3.31"
+futures = "0.3.32"
 log = "0.4.29"
 reqwest = { version = "0.13", features = ["native-tls-vendored", "json"] }
 serde = "1.0.228"
