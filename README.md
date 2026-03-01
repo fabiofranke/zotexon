@@ -11,8 +11,8 @@ Headless tool to export a Zotero library using only the web API — perfect for 
 
 > [!TIP]  
 > Example use case — LaTeX in a devcontainer 🧑‍💻📚
-> - Problem: you work on a LaTeX project inside a devcontainer and want your local .bib file always in sync with your online Zotero library without running the Zotero desktop app.
-> - Solution: run zotexon in sync mode inside the devcontainer (or as a background service). The .bib file in your project will be updated automatically whenever the online library changes — seamless citation updates for builds and previews.
+> - Problem: you work on a LaTeX project inside a devcontainer and want your local citations (.bib file) always in sync with your online Zotero library without running the Zotero desktop app.
+> - Solution: run zotexon in sync mode inside the devcontainer. The .bib file in your project will be updated automatically whenever the online library changes — seamless citation updates for builds and previews.
 
 ## Installation
 #### From prebuilt releases (recommended — project is not on crates.io yet):
@@ -62,6 +62,6 @@ Options:
 
 ## Contributing & License
 - Contributions welcome — open an issue or PR on GitHub.
-- Licensed under MIT — see Cargo.toml.
+- Licensed under MIT.
 
 #### Happy exporting! ✨
