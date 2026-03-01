@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - ReleaseDate
 
+### Changed
+- improved README with clearer installation instructions, use case example, and caveats section
+
+### Maintenance
+- dependency updates
+
 ## [0.7.0] - 2026-02-13
 
 ### Added
