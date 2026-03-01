@@ -16,19 +16,19 @@ Headless tool to export a Zotero library using only the web API — perfect for 
 
 ## Installation
 #### From prebuilt releases (recommended — project is not on crates.io yet):
-  1. Download the appropriate archive for your platform from the [GitHub Releases page](https://github.com/fabiofranke/zotexon/releases)
-  2. Unpack and move the `zotexon` binary to your desired location - example on linux:
-     ```bash
-     tar xzf zotexon-x86_64-unknown-linux-musl.tar.gz
-     sudo mv zotexon /usr/local/bin/
-     ```
+1. Download the appropriate archive for your platform from the [GitHub Releases page](https://github.com/fabiofranke/zotexon/releases)
+2. Unpack and move the `zotexon` binary to your desired location - example on linux:
+   ```bash
+   tar xzf zotexon-x86_64-unknown-linux-musl.tar.gz
+   sudo mv zotexon /usr/local/bin/
+   ```
 #### Build from source (Rust toolchain needed)
-    ```bash
-    git clone https://github.com/fabiofranke/zotexon.git
-    cd zotexon
-    cargo build --release
-    # binary at target/release/zotexon
-    ```
+```bash
+git clone https://github.com/fabiofranke/zotexon.git
+cd zotexon
+cargo build --release
+# binary at target/release/zotexon
+```
 
 ## Quick start
 1. Create a Zotero API key with read access: https://www.zotero.org/settings/keys/new
