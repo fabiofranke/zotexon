@@ -10,7 +10,7 @@ Headless tool to export a Zotero library using only the web API — perfect for 
 - 🧩 Minimal runtime footprint — single binary; ideal for CI, containers, Raspberry Pi, and remote development.
 
 > [!TIP]  
-> Example use case — LaTeX in a devcontainer 🧑‍💻📚
+> **Example use case — LaTeX in a devcontainer** 🧑‍💻📚
 > - Problem: you work on a LaTeX project inside a devcontainer and want your local citations (.bib file) always in sync with your online Zotero library without running the Zotero desktop app.
 > - Solution: run zotexon in sync mode inside the devcontainer. The .bib file in your project will be updated automatically whenever the online library changes — seamless citation updates for builds and previews.
 
@@ -40,6 +40,13 @@ Headless tool to export a Zotero library using only the web API — perfect for 
     ```bash
     zotexon --api-key YOUR_KEY --output library.bib --sync
     ```
+> [!WARNING]  
+> **Caveats**
+> - The output file is overwritten on every export.  
+>   Do **not** edit or add your own entries to the exported `.bib` – any manual
+>   changes will be lost the next time zotexon runs.
+> - Ensure the directory containing the output file exists and is writable by the user
+>   running zotexon.
 
 ## Usage
 <!-- cli-help-start -->
