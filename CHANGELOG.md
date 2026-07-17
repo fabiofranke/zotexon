@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Maintenance
 - dependency updates
+- minor improvements
 
 ## [0.7.0] - 2026-02-13
 
