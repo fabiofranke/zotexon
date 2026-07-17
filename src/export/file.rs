@@ -95,7 +95,7 @@ impl<TClient: ZoteroClient> FileExporter<TClient> {
             FetchItemsResponse::UpToDate => {
                 log::info!(
                     "File '{}' is up to date with the Zotero library",
-                    &self.file_path
+                    self.file_path
                 );
                 Ok(ExportSuccess::NoChanges)
             }
@@ -118,7 +118,7 @@ impl<TClient: ZoteroClient> FileExporter<TClient> {
                 log::info!(
                     "Wrote library export with version {} to file '{}'",
                     last_modified_version,
-                    &self.file_path
+                    self.file_path
                 );
                 Ok(ExportSuccess::Changes)
             }
